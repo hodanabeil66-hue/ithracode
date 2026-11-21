@@ -20,7 +20,6 @@ export type LectureDTO = {
   description: string | null;
   type: string;
   videoDuration: number | null;
-  muxPlaybackId: string | null;
   position: number;
   isFree: boolean;
 };

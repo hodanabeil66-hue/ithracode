@@ -264,10 +264,6 @@ export const env = createEnv({
     // Redis
     REDIS_URL: z.string().url().describe('Redis connection URL'),
 
-    // Mux
-    MUX_TOKEN_ID: z.string().describe('Mux Token ID'),
-    MUX_TOKEN_SECRET: z.string().describe('Mux Token Secret'),
-
     // Bunny Stream (optional — signed HLS URLs for course video playback)
     BUNNY_STREAM_CDN_HOSTNAME: z
       .string()
@@ -353,8 +349,6 @@ export const env = createEnv({
     TURNSTILE_USE_PRODUCTION_KEYS: process.env.TURNSTILE_USE_PRODUCTION_KEYS,
     PAYMENT_ANALYTICS_ENABLED: process.env.PAYMENT_ANALYTICS_ENABLED,
     REDIS_URL: process.env.REDIS_URL,
-    MUX_TOKEN_ID: process.env.MUX_TOKEN_ID,
-    MUX_TOKEN_SECRET: process.env.MUX_TOKEN_SECRET,
     BUNNY_STREAM_CDN_HOSTNAME: process.env.BUNNY_STREAM_CDN_HOSTNAME,
     BUNNY_STREAM_TOKEN_AUTH_KEY: process.env.BUNNY_STREAM_TOKEN_AUTH_KEY,
     COOKIE_DOMAIN: process.env.COOKIE_DOMAIN,

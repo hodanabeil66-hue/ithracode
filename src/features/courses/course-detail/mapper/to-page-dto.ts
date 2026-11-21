@@ -32,7 +32,6 @@ export function mapSectionsFromDetailEntity(
       description: lecture.description,
       type: lecture.type,
       videoDuration: lecture.video?.duration ?? null,
-      muxPlaybackId: null,
       position: lecture.position,
       isFree: lecture.isFree,
     })),

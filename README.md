@@ -30,13 +30,13 @@ payments, and instructor tooling.
 | Area            | Capabilities                                                                                           |
 | --------------- | ------------------------------------------------------------------------------------------------------ |
 | **Students**    | Course catalog, learning paths, cart, checkout, enrolled-course study view, progress tracking, reviews |
-| **Instructors** | Course/section/lecture management, Mux video upload, attachments, consultation availability            |
+| **Instructors** | Course/section/lecture management, Bunny Stream video, attachments, consultation availability          |
 | **Admins**      | User/course management, payment reconciliation                                                         |
 | **Auth**        | NextAuth v5 — credentials, Google, GitHub; role-based access (Student / Instructor / Admin)            |
 | **Payments**    | Stripe (default) + optional Paymob; webhooks, BullMQ fulfillment, reconciliation workers               |
 | **Progress**    | Course- and lecture-level progress APIs with enrollment scoping, RBAC, and publication rules           |
 | **Contact**     | Secure contact form — Cloudflare Turnstile, honeypot, Redis rate limiting, Resend notifications        |
-| **Video**       | Mux streaming and playback                                                                             |
+| **Video**       | Bunny Stream signed HLS playback                                                                       |
 
 ## Architecture
 
@@ -103,7 +103,7 @@ features/{feature}/
 | **Cache / queues**  | Redis, BullMQ                                                  |
 | **Auth**            | NextAuth v5 (Auth.js), Prisma adapter                          |
 | **Payments**        | Stripe, Paymob (optional)                                      |
-| **Video**           | Mux                                                            |
+| **Video**           | Bunny Stream                                                   |
 | **Observability**   | Sentry, Pino                                                   |
 | **Testing**         | Vitest                                                         |
 | **Package manager** | pnpm 10                                                        |
@@ -143,7 +143,7 @@ ithra-code/
 - PostgreSQL
 - Redis (local via `docker compose up -d`, or hosted)
 - Stripe account (test mode) for payments
-- Mux account for video
+- Bunny Stream library (optional; for signed course video playback)
 
 ### Install and configure
 

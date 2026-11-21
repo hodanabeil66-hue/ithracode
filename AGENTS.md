@@ -7,7 +7,7 @@ in this repository.
 
 Next.js (App Router) full-stack app for **IthraCode** — an Arabic-first (RTL) online learning
 platform for programming & web development courses. Built on **Next.js 16** + **React 19**, **Prisma
-ORM 7** with PostgreSQL, **NextAuth v5** for auth, **Stripe** and **Paymob** for payments, **Mux**
+ORM 7** with PostgreSQL, **NextAuth v5** for auth, **Stripe** and **Paymob** for payments, **Bunny Stream**
 for video, and **BullMQ + Redis** for background jobs. Package manager is **pnpm**.
 
 ## Forbidden Actions

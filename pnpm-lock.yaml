@@ -37,9 +37,6 @@ importers:
       '@langchain/langgraph':
         specifier: ^1.4.9
         version: 1.4.9(@langchain/core@1.2.4(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-proto@0.221.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.1))(openai@7.1.0(zod@4.3.6)))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.3.6)
-      '@mux/mux-player-react':
-        specifier: ^3.11.8
-        version: 3.11.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@opentelemetry/api':
         specifier: ^1.9.1
         version: 1.9.1
@@ -1120,31 +1117,6 @@ packages:
     resolution: {integrity: sha512-x0fWaQtYp4E6sktbsdAqnehxDgEc/VwM7uLsRCYWaiGu0ykYdZPiS8zCWdnjHwyiumousxfBm4SO31eXqwEZhQ==}
     cpu: [x64]
     os: [win32]
-
-  '@mux/mux-data-google-ima@0.3.16':
-    resolution: {integrity: sha512-ZJm/qV7pTfEKe9WDZYF1gixofyZeX5M8Bnzpzqpvk7lAKOxa2fC+nnKEQpYATdNd9s9aOe6kmSZWMRcXqlS6KQ==}
-
-  '@mux/mux-player-react@3.11.8':
-    resolution: {integrity: sha512-aEB8irCceIgvcXjwXH6Nvb73efG3w4O3N6tUL4rqpO5Qamggbw/JGvg1+c2EMgT+dRH2WpBKEfmXyFnAOzPjtw==}
-    peerDependencies:
-      '@types/react': ^17.0.0 || ^17.0.0-0 || ^18 || ^18.0.0-0 || ^19 || ^19.0.0-0
-      '@types/react-dom': '*'
-      react: ^17.0.2 || ^17.0.0-0 || ^18 || ^18.0.0-0 || ^19 || ^19.0.0-0
-      react-dom: ^17.0.2 || ^17.0.2-0 || ^18 || ^18.0.0-0 || ^19 || ^19.0.0-0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
-
-  '@mux/mux-player@3.11.8':
-    resolution: {integrity: sha512-2VgH/Gx4RkOwqKZdtvEoR+mYQxoYK0UkdE5OYox1LjC/3UkMlwWUPAScT9v7f7gRYgBAoLGEBDWwG941FvdmWg==}
-
-  '@mux/mux-video@0.30.6':
-    resolution: {integrity: sha512-vtAb31h6X1Dn6nLhyRBhf92/2tIN/YiWgG96BEeA5Mxg8uuaFgI1PjND5pr/q/afMaLsfkiX7mo1xgenIMmYFA==}
-
-  '@mux/playback-core@0.34.0':
-    resolution: {integrity: sha512-f0Gqiz26LJYq+8xaRUXnozlVyxsC8QSS6N7014ItA5ocS4xRVaYlXmUfQoDnQ64LLeSR0MzHjem0kNzY1x1IAw==}
 
   '@napi-rs/canvas-android-arm64@0.1.80':
     resolution: {integrity: sha512-sk7xhN/MoXeuExlggf91pNziBxLPVUqF2CAVnB57KLG/pz7+U5TKG8eXdc3pm0d7Od0WreB6ZKLj37sX9muGOQ==}
@@ -3731,14 +3703,6 @@ packages:
   caniuse-lite@1.0.30001781:
     resolution: {integrity: sha512-RdwNCyMsNBftLjW6w01z8bKEvT6e/5tpPVEgtn22TiLGlstHOVecsX2KHFkD5e/vRnIE4EGzpuIODb3mtswtkw==}
 
-  castable-video@1.1.12:
-    resolution: {integrity: sha512-fSHLEq6cUb+5TMMxTrYV9Yc7RJvcyz0IvjQpGFmjX55CTNZ/OzPlp0GLQl3YWligG57H80q6FrbgOJ9+jFeIgA==}
-
-  ce-la-react@0.3.2:
-    resolution: {integrity: sha512-QJ6k4lOD/btI08xG8jBPxRCGXvCnusGGkTsiXk0u3NqUu/W+BXRnFD4PYjwtqh8AWmGa5LDbGk0fLQsqr0nSMA==}
-    peerDependencies:
-      react: '>=17.0.0'
-
   chai@5.3.3:
     resolution: {integrity: sha512-4zNhdJD/iOjSH0A05ea+Ke6MU5mmpQcbQsSOkgdaUMJ9zTlDTD/GYlwohmIE2u0gaxHYiVHEn1Fw9mZ/ktJWgw==}
     engines: {node: '>=18'}
@@ -3900,9 +3864,6 @@ packages:
 
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
-
-  custom-media-element@1.4.6:
-    resolution: {integrity: sha512-/HRYqJOa1ob5ik4q7FIJVYxTJCFs/FL3+cQPAJjUf2uiqrDEzbTgB315gQ2rG8oK3w094W9m5tcB8S5Qah+caA==}
 
   d3-array@3.2.4:
     resolution: {integrity: sha512-tdQAmyA18i4J7wprpYq8ClcxZy3SC31QMeByyCFyRt7BVHdREQZ5lpzoe5mFEYZUWe+oq8HBvk9JjpibyEV4Jg==}
@@ -4587,9 +4548,6 @@ packages:
   highlightjs-vue@1.0.0:
     resolution: {integrity: sha512-PDEfEF102G23vHmPhLyPboFCD+BkMGu+GuJe2d9/eH4FsCwvgBpnc9n0pGE+ffKdph38s6foEZiEjdgHdzp+IA==}
 
-  hls.js@1.6.16:
-    resolution: {integrity: sha512-VSIRpLfRwlAAdGL4wiTucx2ScRipo0ed1FBatWkyt832jC4CReKstga6yIhYVwGu9LOBjuX9wzmRMeQdBJtzEA==}
-
   hono@4.12.9:
     resolution: {integrity: sha512-wy3T8Zm2bsEvxKZM5w21VdHDDcwVS1yUFFY6i8UobSsKfFceT7TOwhbhfKsDyx7tYQlmRM5FLpIuYvNFyjctiA==}
     engines: {node: '>=16.9.0'}
@@ -5131,15 +5089,6 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
-  media-chrome@4.18.3:
-    resolution: {integrity: sha512-YuS2wY0Fn+2nXGijJYn4+IE0n9wFe3v6SvOZHGNkoxh32T/cCcrXHUWskA+9tyYTONa6JKwKAOJJeO6QOlJLKw==}
-
-  media-chrome@4.19.0:
-    resolution: {integrity: sha512-HWhDTwts+BSbdPkkB1VsJXp5kvL0IxY7xFT5tBwliM2+89kTPVTnHnev+9it2f9PweANjT/C8/C/S0PW9oyZbA==}
-
-  media-tracks@0.3.5:
-    resolution: {integrity: sha512-l54rkKXlLBt3ob3zOLWHcnjvwUmX5bNEZ70igyapOZZC9imzqBmq1oz8p2roiV04KhjblFIi2hetLPF1oYVLRA==}
-
   meow@13.2.0:
     resolution: {integrity: sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA==}
     engines: {node: '>=18'}
@@ -5198,9 +5147,6 @@ packages:
   mustache@4.2.0:
     resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
     hasBin: true
-
-  mux-embed@5.18.0:
-    resolution: {integrity: sha512-y/iRQIUIyRUL+5zUHynrMMMpRlWVXfEFvSwTx7h//qIguQ4BQdQtc3qhKEdGaSikTeVuDeVC5IwP4aDuHUpjIA==}
 
   mysql2@3.15.3:
     resolution: {integrity: sha512-FBrGau0IXmuqg4haEZRBfHNWB5mUARw6hNwPDXXGg0XzVJ50mr/9hb267lvpVMnhZ1FON3qNd4Xfcez1rbFwSg==}
@@ -5561,9 +5507,6 @@ packages:
 
   pkg-types@2.3.0:
     resolution: {integrity: sha512-SIqCzDRg0s9npO5XQ3tNZioRY1uK06lA41ynBC1YmFTmnY6FjUjVt6s4LoADmwoig1qqD0oK8h1p/8mlMx8Oig==}
-
-  player.style@0.3.4:
-    resolution: {integrity: sha512-5O9bkbq0APQIkhptyZwp0gUgheCeImGPFo4hvPF2M5xBmgsUYzsUPHCfMye2xyeRE1zvQBKtziaC3jPgnHE1tw==}
 
   png-js@1.1.0:
     resolution: {integrity: sha512-PM/uYGzGdNSzqeOgly68+6wKQDL1SY0a/N+OEa/+br6LnHWOAJB0Npiamnodfq3jd2LS/i2fMeOKSAILjA+m5Q==}
@@ -7354,43 +7297,6 @@ snapshots:
 
   '@msgpackr-extract/msgpackr-extract-win32-x64@3.0.3':
     optional: true
-
-  '@mux/mux-data-google-ima@0.3.16':
-    dependencies:
-      mux-embed: 5.18.0
-
-  '@mux/mux-player-react@3.11.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
-    dependencies:
-      '@mux/mux-player': 3.11.8(react@19.2.4)
-      '@mux/playback-core': 0.34.0
-      prop-types: 15.8.1
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-    optionalDependencies:
-      '@types/react': 19.2.14
-      '@types/react-dom': 19.2.3(@types/react@19.2.14)
-
-  '@mux/mux-player@3.11.8(react@19.2.4)':
-    dependencies:
-      '@mux/mux-video': 0.30.6
-      '@mux/playback-core': 0.34.0
-      media-chrome: 4.18.3(react@19.2.4)
-      player.style: 0.3.4(react@19.2.4)
-    transitivePeerDependencies:
-      - react
-
-  '@mux/mux-video@0.30.6':
-    dependencies:
-      '@mux/mux-data-google-ima': 0.3.16
-      '@mux/playback-core': 0.34.0
-      castable-video: 1.1.12
-      custom-media-element: 1.4.6
-      media-tracks: 0.3.5
-
-  '@mux/playback-core@0.34.0':
-    dependencies:
-      hls.js: 1.6.16
-      mux-embed: 5.18.0
 
   '@napi-rs/canvas-android-arm64@0.1.80':
     optional: true
@@ -10254,14 +10160,6 @@ snapshots:
 
   caniuse-lite@1.0.30001781: {}
 
-  castable-video@1.1.12:
-    dependencies:
-      custom-media-element: 1.4.6
-
-  ce-la-react@0.3.2(react@19.2.4):
-    dependencies:
-      react: 19.2.4
-
   chai@5.3.3:
     dependencies:
       assertion-error: 2.0.1
@@ -10402,8 +10300,6 @@ snapshots:
   cssesc@3.0.0: {}
 
   csstype@3.2.3: {}
-
-  custom-media-element@1.4.6: {}
 
   d3-array@3.2.4:
     dependencies:
@@ -11226,8 +11122,6 @@ snapshots:
 
   highlightjs-vue@1.0.0: {}
 
-  hls.js@1.6.16: {}
-
   hono@4.12.9: {}
 
   html-escaper@2.0.2: {}
@@ -11712,20 +11606,6 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
-  media-chrome@4.18.3(react@19.2.4):
-    dependencies:
-      ce-la-react: 0.3.2(react@19.2.4)
-    transitivePeerDependencies:
-      - react
-
-  media-chrome@4.19.0(react@19.2.4):
-    dependencies:
-      ce-la-react: 0.3.2(react@19.2.4)
-    transitivePeerDependencies:
-      - react
-
-  media-tracks@0.3.5: {}
-
   meow@13.2.0: {}
 
   merge2@1.4.1: {}
@@ -11782,8 +11662,6 @@ snapshots:
       msgpackr-extract: 3.0.3
 
   mustache@4.2.0: {}
-
-  mux-embed@5.18.0: {}
 
   mysql2@3.15.3:
     dependencies:
@@ -12176,12 +12054,6 @@ snapshots:
       confbox: 0.2.4
       exsolve: 1.0.8
       pathe: 2.0.3
-
-  player.style@0.3.4(react@19.2.4):
-    dependencies:
-      media-chrome: 4.19.0(react@19.2.4)
-    transitivePeerDependencies:
-      - react
 
   png-js@1.1.0:
     dependencies:

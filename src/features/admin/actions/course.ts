@@ -148,8 +148,6 @@ export async function deleteCourse(courseId: string) {
 
   if (!userId) throw new Error('Unauthorized');
 
-  // ملاحظة: لو الكورس فيه فيديوهات على Mux، يفضل تمسحي الـ Assets من Mux أولاً
-
   await prisma.course.delete({
     where: {
       id: courseId,
