@@ -1,0 +1,111 @@
+import Image from 'next/image';
+import { Check } from 'lucide-react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import type { CourseListDTO } from '@/types/course/course.dto';
+import { formatPrice } from '@/lib/formatters';
+import { CourseMetadataBadges } from '@/features/courses/components/course-metadata-badges';
+import Link from 'next/link';
+import { CoursePurchaseCta } from '@/features/courses/components/course-purchase-cta';
+import { PUBLIC_ROUTES } from '@/constants/routes';
+import { buttonVariants } from '@/components/ui/button';
+import { CourseCardWrapper } from '@/components/shared/course-card-wrapper';
+import { buildLearnHref } from '@/features/courses/lib/build-learn-href';
+// Hover Card Component
+interface CourseHoverCardProps {
+  objectives: CourseListDTO['objectives'];
+}
+
+function CourseHoverCard({ objectives }: CourseHoverCardProps) {
+  return (
+    <>
+      <div className="flex flex-col gap-4">
+        <h4 className="font-bold text-lg text-right">ما ستتعلمه</h4>
+
+        <ul className="space-y-3 max-h-96 overflow-y-auto custom-scrollbar">
+          {objectives.map((objective: string, index: number) => (
+            <li key={index} className="flex items-start gap-2">
+              <Check className="size-4 text-primary shrink-0 mt-0.5" />
+              <span className="text-sm text-muted-foreground leading-snug">
+                {objective}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
+interface CourseCardProps {
+  course: CourseListDTO;
+}
+
+export function CourseCard({ course }: CourseCardProps) {
+  const learnHref = buildLearnHref({
+    slug: course.slug,
+    firstLectureId: course.firstLectureId,
+  });
+
+  return (
+    <CourseCardWrapper
+      className="[&:nth-child(3n)_.course-hover-card]:lg:right-auto [&:nth-child(3n)_.course-hover-card]:lg:left-[calc(100%+0.8rem)] [&:nth-child(3n)_.course-hover-card]:lg:slide-in-from-left-2"
+      hoverCard={<CourseHoverCard objectives={course.objectives} />}
+    >
+      {/* Card is a flex column — Link covers everything except the footer button */}
+      <Card className="overflow-hidden hover:shadow-md transition-all duration-300 hover:border-primary/30 flex flex-col h-full gap-5">
+        <Link
+          href={`${PUBLIC_ROUTES.COURSES}/${course.slug}`}
+          className="flex flex-col flex-1 gap-5 min-h-0"
+        >
+          <div className="relative w-full aspect-video overflow-hidden">
+            <Image
+              src={course.thumbnailUrl}
+              alt={course.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+
+          <CardContent className="flex flex-col flex-1 gap-2">
+            <div className="space-y-2 mb-6">
+              <h3 className="font-bold text-lg leading-tight line-clamp-2 truncate">
+                {course.title}
+              </h3>
+              <p className="text-sm text-muted-foreground line-clamp-2">
+                {course.description}
+              </p>
+            </div>
+
+            <CourseMetadataBadges course={course} />
+          </CardContent>
+        </Link>
+
+        {/* Footer lives outside the Link so the button click doesn't navigate */}
+        <CardFooter className="flex items-center justify-between p-4 pt-0">
+          {course.isPurchased ? (
+            <span className="text-sm font-medium text-success flex items-center gap-1">
+              <Check className="size-4" />
+              تم الشراء
+            </span>
+          ) : (
+            <span className="text-lg font-bold">
+              {formatPrice(course.price, course.currency)}
+            </span>
+          )}
+
+          {course.isPurchased ? (
+            <Link
+              href={learnHref}
+              className={buttonVariants({ variant: 'course' })}
+            >
+              شاهد الدورة
+            </Link>
+          ) : (
+            <CoursePurchaseCta course={course} />
+          )}
+        </CardFooter>
+      </Card>
+    </CourseCardWrapper>
+  );
+}

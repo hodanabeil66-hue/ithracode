@@ -1,0 +1,10 @@
+echo "🚀 Running pre-push checks..."
+
+# Run build
+echo "🔨 Building the app..."
+pnpm build || {
+  echo "❌ Build failed. Please fix the errors before pushing."
+  exit 1
+}
+
+echo "✅ Pre-push checks passed! Ready to push."

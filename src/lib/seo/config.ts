@@ -1,0 +1,108 @@
+/** Latin brand: home `<title>`, Open Graph `siteName`, JSON-LD, inner-page title suffix. */
+export const SEO_SITE_NAME_EN = 'IthraCode';
+
+/** Production canonical origin for metadata and JSON-LD when indexing is enabled. */
+export const SEO_CANONICAL_ORIGIN = 'https://ithracode.tech';
+
+export const SEO_OG_LOCALE = 'en_US';
+
+export const SEO_HTML_LANGUAGE = 'en';
+
+/** Value proposition for inner pages and WebPage schema on the home page. */
+export const SEO_DEFAULT_TITLE = 'تعلم البرمجة من الواقع';
+
+export const SEO_DEFAULT_DESCRIPTION = `${SEO_SITE_NAME_EN} — منصة عربية لتعلم البرمجة من الواقع، من أساسيات تطوير الويب إلى React وNext.js وهندسة البرمجيات.`;
+
+export const SEO_LOGO_PATH = '/img/ithracode.png';
+
+export const SEO_DEFAULT_OG_IMAGE_PATH = '/img/ithracode.png';
+
+export const SEO_OG_IMAGE_WIDTH = 1200;
+
+export const SEO_OG_IMAGE_HEIGHT = 630;
+
+export const SEO_TWITTER_SITE = '@ithracode';
+
+/** Public author name. */
+export const SEO_AUTHOR_NAME = 'Hoda Nabeil';
+
+/** Extra Latin spelling for search only. */
+export const SEO_AUTHOR_ALTERNATE_NAMES = [] as const;
+
+export const SEO_AUTHOR_JOB_TITLE =
+  'Full Stack Developer & Programming Instructor';
+
+const SEO_BRAND_KEYWORDS = [
+  SEO_SITE_NAME_EN,
+  'تعلم البرمجة',
+  'تعلم تطوير الويب',
+  'Web Development',
+  'Software Development',
+  'Software Architecture',
+  'Programming Education',
+  'هندسة البرمجيات',
+] as const;
+
+export const SEO_GLOBAL_KEYWORDS = [...SEO_BRAND_KEYWORDS] as const;
+
+export const SEO_HOME_KEYWORDS = [
+  ...SEO_BRAND_KEYWORDS,
+  'برمجة',
+  'تطوير الويب',
+  'TypeScript',
+  'JavaScript',
+  'HTML5',
+  'CSS3',
+  'React',
+  'Next.js',
+  'Redux',
+  'Redux Toolkit',
+  'TanStack Query',
+  'Zustand',
+  'Tailwind CSS',
+  'Material UI',
+  'Node.js',
+  'NestJS',
+  'REST APIs',
+  'GraphQL',
+  'Prisma',
+  'Playwright',
+  'Docker',
+  'Git',
+  'Server-Side Rendering (SSR)',
+  'SEO Optimization',
+  'Core Web Vitals',
+  'Performance Optimization',
+  'SOLID Principles',
+  'Responsive Web Design',
+  'تعلم JavaScript',
+  'تعلم TypeScript',
+  'تعلم React',
+  'تعلم Next.js',
+  'تعلم Node.js',
+  'تعلم تطوير تطبيقات Full Stack',
+  SEO_AUTHOR_NAME,
+] as const;
+
+/**
+ * Public social profiles that actually appear in the footer.
+ * Twitter/X is omitted — there is no public Twitter URL in the product.
+ */
+export const SEO_SAME_AS = [
+  'https://www.linkedin.com/in/hoda-nabeil-144094225/',
+  'https://youtube.com/@ithracode',
+  'https://www.facebook.com/profile.php?id=61594744076040&locale=ar_AR',
+] as const;
+
+export const SEO_META_DESCRIPTION_MAX_LENGTH = 160;
+
+export const SEO_COURSE_SEARCH_PATH = '/courses';
+
+export const SEO_COURSE_SEARCH_QUERY_PARAM = 'search';
+
+/** Google Search Console site ownership verification token. */
+export const SEO_GOOGLE_SITE_VERIFICATION =
+  '5y-OWAMpRHmTG04E1uwGxWxErgzcuEqkAiGE50X0sL4';
+
+/** Google Tag Manager container ID. */
+export const GTM_CONTAINER_ID = 'GTM-K5XRQW2Z';

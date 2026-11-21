@@ -1,0 +1,3 @@
+export const HOME_FEATURED_COURSES_LIMIT = 6;
+export const HOME_TESTIMONIALS_LIMIT = 6;
+export const HOME_FAQS_LIMIT = 12;
